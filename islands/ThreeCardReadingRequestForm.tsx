@@ -1,20 +1,22 @@
-import { JSX } from 'preact';
-import { ThreeCardReadingRequest } from '@my-diviner/ai';
-import { Action, classSet, Input } from '@my-diviner/atomic';
+import { JSX } from "preact";
+import { ThreeCardReadingRequest } from "@my-diviner/ai";
+import { Action, classSet, Input } from "@my-diviner/atomic";
 
 type ThreeCardReadingRequestFormProps = {
   onDivine: (req: ThreeCardReadingRequest) => void;
 } & JSX.HTMLAttributes<HTMLFormElement>;
 
 export function ThreeCardReadingRequestForm(
-  props: ThreeCardReadingRequestFormProps
+  props: ThreeCardReadingRequestFormProps,
 ) {
   const onSubmit = (e: JSX.TargetedEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
+
     const formData = new FormData(e.currentTarget);
 
-    const readingReq = Object.fromEntries(formData.entries()) as ThreeCardReadingRequest;
+    const readingReq = Object.fromEntries(
+      formData.entries(),
+    ) as ThreeCardReadingRequest;
 
     props.onDivine(readingReq);
   };
@@ -24,7 +26,7 @@ export function ThreeCardReadingRequestForm(
       onSubmit={onSubmit}
       {...props}
       class={classSet([
-        '-:w-full -:py-2 -:my-2 -:mx-2',
+        "-:w-full -:py-2 -:my-2 -:mx-2",
       ], props)}
     >
       <div class="flex flex-col items-center text-left">
@@ -45,7 +47,7 @@ export function ThreeCardReadingRequestForm(
             class="w-full"
           />
         </div>
-        
+
         <div class="w-full my-2">
           <label
             for="present"
@@ -63,7 +65,7 @@ export function ThreeCardReadingRequestForm(
             class="w-full"
           />
         </div>
-        
+
         <div class="w-full my-2">
           <label
             for="future"

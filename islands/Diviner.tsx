@@ -1,16 +1,16 @@
-import { JSX } from 'preact';
-import { Action, classSet, Input } from '@my-diviner/atomic';
-import { Divined } from './Divined.tsx';
-import { ThreeCardReadingRequestForm } from './ThreeCardReadingRequestForm.tsx';
-import { useState } from 'preact/hooks';
-import { ThreeCardReadingRequest } from '@my-diviner/ai';
-import { LoadingIcon } from '$fathym/atomic-icons';
+import { JSX } from "preact";
+import { Action, classSet, Input } from "@my-diviner/atomic";
+import { Divined } from "./Divined.tsx";
+import { ThreeCardReadingRequestForm } from "./ThreeCardReadingRequestForm.tsx";
+import { useState } from "preact/hooks";
+import { ThreeCardReadingRequest } from "@my-diviner/ai";
+import { LoadingIcon } from "$fathym/atomic-icons";
 
 type DivinerProps = JSX.HTMLAttributes<HTMLDivElement>;
 
 export function Diviner(props: DivinerProps) {
   const [reading, setReading] = useState<ThreeCardReadingRequest | undefined>(
-    undefined
+    undefined,
   );
 
   const startNewReading = (e: JSX.TargetedMouseEvent<HTMLButtonElement>) => {
@@ -20,7 +20,7 @@ export function Diviner(props: DivinerProps) {
   return (
     <div
       {...props}
-      class={classSet(['flex flex-col md:flex-row gap-8 py-6 m-4'], props)}
+      class={classSet(["flex flex-col md:flex-row gap-8 py-6 m-4"], props)}
     >
       <div class="flex flex-col items-center max-w-100 mx-auto transition-all duration-500">
         <img src="/my-diviner-icon-alpha.png" />
