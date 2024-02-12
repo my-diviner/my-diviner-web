@@ -7,7 +7,8 @@ export default function App({ Component }: PageProps) {
       <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>fresh-project.</title>
+        <title>My Diviner</title>
+        <link rel="icon" type="image/png" href="./my-diviner-icon-alpha.png" />
         <style dangerouslySetInnerHTML={{ __html: CSS }} />
         <link rel="stylesheet" href="/styles.css" />
       </head>
