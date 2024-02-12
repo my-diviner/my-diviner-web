@@ -25,8 +25,8 @@
     "**/_fresh/*"
   ],
   "imports": {
-    "@fathym/atomic-icons": "https://deno.land/x/fathym_atomic_icons@v0.0.17/mod.ts",
-    "@fathym/atomic-icons/browser": "https://deno.land/x/fathym_atomic_icons@v0.0.17/browser.ts",
+    "@fathym/atomic-icons": "https://deno.land/x/fathym_atomic_icons@v0.0.18/mod.ts",
+    "@fathym/atomic-icons/browser": "https://deno.land/x/fathym_atomic_icons@v0.0.18/browser.ts",
     "$fathym/atomic-icons": "./build/iconset/icons/_exports.ts",
     "@fathym/common": "https://deno.land/x/fathym_common@v0.0.137/mod.ts",
     "_$fresh/": "https://deno.land/x/fresh@1.6.3/",

@@ -8,5 +8,6 @@ export const curIconSetConfig: IconSetConfig = {
 
 export const curIconSetGenerateConfig: IconSetGenerateConfig = {
   IconSet: curIconSetConfig,
+  Generate: false,
   SpriteSheet: "iconset/icons",
 };
